@@ -922,6 +922,7 @@
         benefit: '₹50,000 (BPSC Prelims) / ₹1,00,000 (UPSC Prelims)',
         levels: ['grad_pass', 'civil_services'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
+        generalFemaleOnly: true,
         gender: 'ALL',
         description: 'One-time cash incentive for permanent residents of Bihar (covering SC, ST, EBC, and all categories of women candidates) who qualify the Preliminary examination of BPSC Combined Competitive Exam or UPSC Civil Services.',
         process: 'Online application with Prelims admit card and result notification.',
@@ -1377,7 +1378,8 @@
         const matchLevel = state.eligLevel === 'ALL' || s.levels.includes(state.eligLevel);
         const matchCat = state.eligCategory === 'ALL' || s.categories.includes(state.eligCategory);
         const matchGender = state.eligGender === 'ALL' || s.gender === 'ALL' || s.gender === state.eligGender;
-        return matchLevel && matchCat && matchGender;
+        const matchGeneralWomen = !(s.generalFemaleOnly && state.eligCategory === 'General' && state.eligGender !== 'Female');
+        return matchLevel && matchCat && matchGender && matchGeneralWomen;
       });
 
       document.getElementById('schemeCountHeading').textContent =
