@@ -863,11 +863,11 @@
       {
         id: 'sch-matric',
         title: 'Mukhyamantri Balak / Balika (10th Passed) Protsahan Yojana',
-        benefit: '₹10,000 One-Time Grant (Class 10 Matric Pass)',
+        benefit: '₹10,000 (1st Division) / ₹8,000 (2nd Division, SC/ST) One-Time Grant',
         levels: ['10th_pass', 'post_matric'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
         gender: 'ALL',
-        description: 'Provides ₹10,000 via Direct Benefit Transfer (DBT) to students who pass the BSEB Class 10 (Matriculation) board examination in 1st Division (all categories) or 2nd Division (for SC/ST students) to support their Class 11–12 studies.',
+        description: 'Provides ₹10,000 via Direct Benefit Transfer (DBT) to students who pass the BSEB Class 10 (Matriculation) board examination in 1st Division, and ₹8,000 to SC/ST students who pass in 2nd Division, to support their Class 11–12 studies.',
         process: 'Apply online on the Medhasoft Bihar portal using your BSEB Class 10 Roll Number and registration details.',
         url: 'https://www.shiksha.com/college/articles/bihar-scholarship-2026-27-list-eligibility-apply-online-last-date-and-status-check-blogId-242985'
       },
@@ -878,7 +878,7 @@
         levels: ['12th_pass', 'post_matric'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
         gender: 'ALL',
-        description: 'Provides collateral-free education loans up to ₹4 Lakh at 4% simple interest (1% for female, transgender, and PwD students) for 12th-pass students of Bihar pursuing B.Tech, General Graduation, Polytechnic, Nursing, or MBA.',
+        description: 'Provides collateral-free, interest-free (0%, since September 2025) education loans up to ₹4 Lakh for 12th-pass students of Bihar pursuing B.Tech, General Graduation, Polytechnic, Nursing, or MBA.',
         process: 'Apply online on the MNSSBY portal and verify documents at DRCC Begusarai.',
         url: 'https://www.7nishchay-yuvaupmission.bihar.gov.in/',
         secondaryUrl: 'https://www.myscheme.gov.in/schemes/bsccs'
@@ -919,7 +919,7 @@
       {
         id: 'sch-bpsc',
         title: 'Mukhyamantri Civil Seva Protsahan Yojana (BPSC / UPSC Prelims)',
-        benefit: '₹50,000 (BPSC Prelims) / ₹1,000,000 (UPSC Prelims)',
+        benefit: '₹50,000 (BPSC Prelims) / ₹1,00,000 (UPSC Prelims)',
         levels: ['grad_pass', 'civil_services'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
         gender: 'ALL',
@@ -1018,7 +1018,7 @@
         {
           badge: 'Post-12th Science Funding',
           title: '₹4 Lakh BSCC Loan & ₹25,000 Inter Grant',
-          desc: 'Unmarried girls passing BSEB 12th receive ₹25,000 under Kanya Utthan Yojana. All 12th-pass students can avail up to ₹4 Lakh at 1%–4% interest via Bihar Student Credit Card at DRCC Begusarai for B.Tech/MBBS/B.Sc.'
+          desc: 'Unmarried girls passing BSEB 12th receive ₹25,000 under Kanya Utthan Yojana. All 12th-pass students can avail an interest-free loan of up to ₹4 Lakh via Bihar Student Credit Card at DRCC Begusarai for B.Tech/MBBS/B.Sc.'
         }
       ],
       class12_arts_com: [
@@ -1686,6 +1686,7 @@
       }
 
       // Initial renders
+      renderLanguage();
       renderGradeStage();
       updateSavedBadge();
       renderZoneExplorer();
