@@ -39,6 +39,13 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
     }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -70,7 +77,7 @@
         <button id="openSavedModalBtn" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white transition flex items-center gap-1.5 shadow-sm">
           <span>🔖</span>
           <span id="savedBtnText">My Study List</span>
-          <span id="savedCountBadge" class="px-1.5 py-0.2 bg-white text-amber-900 rounded-full text-xs font-bold">0</span>
+          <span id="savedCountBadge" class="px-1.5 py-0.5 bg-white text-amber-900 rounded-full text-xs font-bold">0</span>
         </button>
       </div>
     </div>
@@ -297,7 +304,7 @@
 
       <!-- Filter count bar -->
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <p id="collegeResultsCount" class="text-sm font-semibold text-slate-700">Showing all 8 institutions in Begusarai</p>
+        <p id="collegeResultsCount" class="text-sm font-semibold text-slate-700">Showing 10 of 10 institutions in Begusarai</p>
         <button type="button" id="resetCollegeFiltersBtn" class="text-xs font-semibold text-teal-700 hover:underline">Reset Filters</button>
       </div>
 
@@ -437,13 +444,13 @@
                 <td class="py-3 px-4 font-semibold text-slate-900">BSEB (Bihar School Examination Board) & OFSS</td>
                 <td class="py-3 px-4 text-slate-600">Conducts Class 10 (Matric) & Class 12 (Intermediate) board exams and OFSS Class 11 admissions across Begusarai +2 schools</td>
                 <td class="py-3 px-4 text-slate-600">Class 10 Matric, Class 12 Inter (I.Sc, I.A., I.Com) & Medhasoft Scholarships</td>
-                <td class="py-3 px-4"><a href="https://www.myscheme.gov.in/schemes/pmssb" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold hover:underline">BSEB / PMS Info ↗</a></td>
+                <td class="py-3 px-4"><a href="https://secondary.biharboardonline.org/" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold hover:underline">BSEB Secondary ↗</a> • <a href="https://intermediate.biharboardonline.com/" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold hover:underline">Inter ↗</a></td>
               </tr>
               <tr>
                 <td class="py-3 px-4 font-semibold text-slate-900">Lalit Narayan Mithila University (LNMU)</td>
                 <td class="py-3 px-4 text-slate-600">Affiliating university for G.D. College, S.K.M. College, S.B.S.S. College, R.C.S. College & A.P.S.M. College</td>
                 <td class="py-3 px-4 text-slate-600">4-Year CBCS B.A., B.Sc., B.Com., M.A., M.Sc.</td>
-                <td class="py-3 px-4"><a href="https://www.gdcollegebegusarai.com/" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold hover:underline">G.D. College Portal ↗</a></td>
+                <td class="py-3 px-4"><a href="https://www.lnmu.ac.in/" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold hover:underline">LNMU Official ↗</a> • <a href="https://www.gdcollegebegusarai.com/" target="_blank" rel="noopener noreferrer" class="text-teal-700 font-semibold hover:underline">G.D. College ↗</a></td>
               </tr>
               <tr>
                 <td class="py-3 px-4 font-semibold text-slate-900">RRSDCE Begusarai (Dept. of Science & Tech)</td>
@@ -478,7 +485,7 @@
             <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">Begusarai & Bihar General Knowledge Quiz</h2>
           </div>
           <div class="flex items-center gap-3">
-            <span id="quizScorePill" class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">Score: 0 / 6</span>
+            <span id="quizScorePill" class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">Score: 0 / 8</span>
             <button type="button" id="restartQuizBtn" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition">
               ↻ Reset Quiz
             </button>
@@ -581,28 +588,28 @@
         brandSubtitle: 'For BSEB (Matric/Inter) & CBSE Class 10–12 Students • Schools, Colleges, Board Prep & Scholarships',
         langToggleLabel: 'हिंदी में देखें',
         savedBtnText: 'My Study List',
-        tabOverview: 'Class 10–12 Hub & Overview',
-        tabColleges: 'Schools (+2) & Colleges',
-        tabHeritage: 'NCERT/BSEB Heritage Notes',
-        tabScholarships: '10th/12th Scholarships & Loans',
-        tabQuiz: 'Class 10–12 Board & GK Quiz',
+        tabOverview: 'Overview & Spotlight',
+        tabColleges: 'Begusarai Colleges & Schools',
+        tabHeritage: 'Dinkar & District Heritage',
+        tabScholarships: 'Bihar Scholarships & Exams',
+        tabQuiz: 'Bihar & Begusarai GK Quiz',
         heroBadge: 'Tailored for BSEB & CBSE Class 10–12 Students in Begusarai • मैट्रिक और इंटर छात्रों के लिए विशेष पोर्टल',
         heroHeading: 'Your Class 10–12 (BSEB & CBSE) Academic & Career Guide in <span class="text-amber-400">Begusarai, Bihar</span>',
-        heroDesc: 'From the poetic legacy of <strong class="text-white">Rashtrakavi Ramdhari Singh \'Dinkar\'</strong> in Simaria and Asia\'s largest freshwater oxbow lake at <strong class="text-white">Kanwar Taal</strong>, to premier engineering and degree colleges under LNMU & Bihar Engineering University—explore Begusarai\'s complete academic ecosystem.'
+        heroDesc: 'Designed for <strong class="text-white">BSEB (Matric & Intermediate)</strong> and <strong class="text-white">CBSE Class 10–12</strong> students across Begusarai. Explore +2 schools, inter & degree colleges, NCERT/SCERT heritage modules (<strong class="text-white">Rashtrakavi Dinkar</strong> & <strong class="text-white">Kanwar Lake</strong>), and ₹10,000–₹4,00,000 student scholarships.'
       },
       hi: {
         brandTitle: 'शिक्षा-सेतु बेगूसराय (बिहार)',
-        brandSubtitle: 'बेगूसराय के प्रमुख कॉलेज, दिनकर साहित्यिक धरोहर, कांवर झील और बिहार छात्रवृत्ति पोर्टल',
+        brandSubtitle: 'BSEB (मैट्रिक/इंटर) एवं CBSE कक्षा 10–12 के छात्रों के लिए • स्कूल, कॉलेज, बोर्ड तैयारी और छात्रवृत्ति पोर्टल',
         langToggleLabel: 'Switch to English',
         savedBtnText: 'मेरी अध्ययन सूची',
-        tabOverview: 'मुख्य परिचय एवं झलक',
-        tabColleges: 'बेगूसराय के कॉलेज और स्कूल',
-        tabHeritage: 'राष्ट्रकवि दिनकर एवं धरोहर',
-        tabScholarships: 'बिहार छात्रवृत्ति एवं परीक्षाएं',
-        tabQuiz: 'बेगूसराय एवं बिहार सामान्य ज्ञान क्विज़',
-        heroBadge: 'बिहार की सांस्कृतिक एवं औद्योगिक राजधानी • राष्ट्रकवि दिनकर की पावन भूमि',
-        heroHeading: '<span class="text-amber-400">बेगूसराय, बिहार</span> में उच्च शिक्षा, साहित्य और करियर के अवसर',
-        heroDesc: 'सिमरिया के <strong class="text-white">राष्ट्रकवि रामधारी सिंह \'दिनकर\'</strong> की साहित्यिक विरासत और एशिया की सबसे बड़ी गोखुर झील <strong class="text-white">कांवर ताल (रामसर साइट)</strong> से लेकर जी.डी. कॉलेज और दिनकर इंजीनियरिंग कॉलेज तक—बेगूसराय के संपूर्ण शैक्षणिक जगत से जुड़ें।'
+        tabOverview: 'मुख्य परिचय एवं कक्षा 10–12 रोडमैप',
+        tabColleges: 'बेगूसराय के कॉलेज और +2 स्कूल',
+        tabHeritage: 'दिनकर एवं बेगूसराय धरोहर (NCERT/BSEB)',
+        tabScholarships: 'बिहार छात्रवृत्ति एवं स्टूडेंट क्रेडिट कार्ड',
+        tabQuiz: 'बोर्ड एवं बिहार सामान्य ज्ञान क्विज़',
+        heroBadge: 'बेगूसराय के BSEB (मैट्रिक/इंटर) और CBSE कक्षा 10–12 छात्रों के लिए विशेष रूप से निर्मित',
+        heroHeading: '<span class="text-amber-400">बेगूसराय, बिहार</span> के कक्षा 10–12 (BSEB एवं CBSE) छात्रों के लिए शैक्षणिक व करियर गाइड',
+        heroDesc: 'बेगूसराय के <strong class="text-white">BSEB (मैट्रिक और इंटरमीडिएट)</strong> तथा <strong class="text-white">CBSE कक्षा 10–12</strong> के विद्यार्थियों के लिए प्रमुख +2 स्कूल, जी.डी. कॉलेज, दिनकर इंजीनियरिंग कॉलेज, <strong class="text-white">राष्ट्रकवि दिनकर</strong> व <strong class="text-white">कांवर झील</strong> अध्ययन मॉड्यूल और ₹10,000 से ₹4,00,000 तक की छात्रवृत्ति योजनाएं।'
       }
     };
 
@@ -689,50 +696,50 @@
       {
         id: 'col-skm',
         name: 'Sri Krishna Mahila (S.K.M.) College, Begusarai',
-        established: '1959',
+        established: '1958',
         category: 'Degree & PG (LNMU)',
         streams: ['Science', 'Arts & Humanities'],
         location: 'Bishwanath Nagar, Begusarai',
         affiliation: 'Constituent Women\'s College of LNMU, Darbhanga',
         courses: 'B.A. & B.Sc. Honours (Hindi, English, History, Political Science, Psychology, Home Science, Botany, Zoology)',
         highlights: 'Leading higher education institution dedicated to women\'s empowerment and Mukhyamantri Kanya Utthan scholars in Begusarai.',
-        url: 'https://www.onlinegdcollege.com/'
+        url: 'https://skmcollege.ac.in/'
       },
       {
         id: 'col-poly',
         name: 'Government Polytechnic, Barauni (Begusarai)',
-        established: '1962',
+        established: '1964',
         category: 'Engineering & Tech',
         streams: ['B.Tech / Diploma'],
-        location: 'Ulao / Singhaul Road, Begusarai',
+        location: 'P.O. Ulao, Singhaul, Begusarai',
         affiliation: 'State Board of Technical Education (SBTE), Bihar',
-        courses: '3-Year Diploma in Civil Engg, Chemical Engg, Electronics Engg, Mechanical & Computer Science',
-        highlights: 'Strategically located near the Barauni industrial corridor, offering technical placement training and industrial internships.',
-        url: 'https://www.7nishchay-yuvaupmission.bihar.gov.in/'
+        courses: '3-Year Diploma in Civil Engg, Chemical Engg, Electronics Engg, Fire Tech & Computer Science',
+        highlights: 'Strategically located near the Barauni industrial corridor, offering technical placement training and industrial internships after Class 10/12.',
+        url: 'https://www.gpbarauni.ac.in/'
       },
       {
         id: 'col-apsm',
-        name: 'A.P.S.M. College, Barauni',
-        established: '1960',
+        name: 'A.P.S.M. (Ayodhya Prasad Singh Memorial) College, Barauni',
+        established: '1958',
         category: 'Degree & PG (LNMU)',
         streams: ['Science', 'Arts & Humanities', 'Commerce'],
         location: 'Barauni, Begusarai',
         affiliation: 'Constituent Unit of LNMU, Darbhanga',
         courses: 'B.A., B.Sc., B.Com. & Intermediate/Vocational Streams',
         highlights: 'Serves thousands of students across Barauni, Teghra, and Zero Mile industrial and rural belts.',
-        url: 'https://www.onlinegdcollege.com/'
+        url: 'https://www.collegeadmission.in/college/apsm-college-barauni-1832'
       },
       {
         id: 'col-rcs',
-        name: 'R.C.S. College, Manjhaul',
+        name: 'Ram Charitra Singh (R.C.S.) College, Manjhaul',
         established: '1967',
         category: 'Degree & PG (LNMU)',
         streams: ['Science', 'Arts & Humanities'],
-        location: 'Manjhaul Subdivision, Begusarai',
+        location: 'Manjhaul Subdivision, Begusarai - 851127',
         affiliation: 'Constituent Unit of LNMU, Darbhanga',
         courses: 'Undergraduate Honours in Humanities, Social Sciences & Pure Sciences',
         highlights: 'Primary higher education hub in the Manjhaul / Kanwar Lake region of northern Begusarai.',
-        url: 'https://www.onlinegdcollege.com/'
+        url: 'https://www.rcscollegemanjhaul.org/'
       },
       {
         id: 'col-schools',
@@ -741,10 +748,10 @@
         category: 'Schools (CBSE/BSEB)',
         streams: ['Science', 'Arts & Humanities', 'Commerce'],
         location: 'Bishnupur (Begusarai) & IOCL Barauni Township / Garhara',
-        affiliation: 'CBSE New Delhi (Alongside B.P. Inter School & BSEB +2 Schools)',
+        affiliation: 'CBSE New Delhi (Navodaya Vidyalaya Samiti / KVS)',
         courses: 'Secondary (Class X) & Senior Secondary (Class XII Science, Commerce, Humanities)',
         highlights: 'Co-educational residential and central schools known for top JEE, NEET, and CBSE Class 10 & 12 board examination results in Begusarai.',
-        url: 'https://www.myscheme.gov.in/schemes/pmssb'
+        url: 'https://school.careers360.com/schools/pm-shri-school-jawahar-navodaya-vidyalaya-begusarai'
       },
       {
         id: 'col-bp-inter',
@@ -752,23 +759,23 @@
         established: '1940',
         category: 'Schools (CBSE/BSEB)',
         streams: ['Science', 'Arts & Humanities', 'Commerce'],
-        location: 'Begusarai Town (Sadar)',
-        affiliation: 'Bihar School Examination Board (BSEB), Patna (OFSS +2 Portal)',
+        location: 'Matihani Road / Bishnupur, Begusarai Sadar',
+        affiliation: 'Bihar School Examination Board (BSEB), Patna',
         courses: 'BSEB Class 10 (Matriculation) & Class 11–12 Intermediate (I.Sc. PCM/PCB, I.A., I.Com.)',
         highlights: 'Premier government BSEB +2 schools in Begusarai Sadar with smart classes, science labs, and high Matric/Inter 1st-division merit selections.',
-        url: 'https://www.myscheme.gov.in/schemes/pmssb'
+        url: 'https://begusarai.idbf.in/703678/bp-high-school-inter-college'
       },
       {
         id: 'col-dav-cbse',
-        name: 'DAV Public School (Itwa / HFC) & St. Paul\'s Senior Secondary School',
-        established: '1992',
+        name: 'D.A.V. Public School (Itwa / Harrakh) & BR DAV Public School (IOCL)',
+        established: '1993',
         category: 'Schools (CBSE/BSEB)',
         streams: ['Science', 'Commerce', 'Arts & Humanities'],
-        location: 'Itwa / Township, Begusarai',
-        affiliation: 'Central Board of Secondary Education (CBSE), New Delhi',
+        location: 'Etwanagar (Itwa) & IOCL Township, Begusarai',
+        affiliation: 'Central Board of Secondary Education (CBSE), New Delhi (Aff. No. 330096)',
         courses: 'CBSE Class 10 Secondary & Class 11–12 Senior Secondary (Science PCM/PCB, Commerce, Humanities)',
-        highlights: 'Leading CBSE senior secondary schools in Begusarai preparing Class 10–12 students for NTSE, Olympiads, JEE Main, NEET UG, and CUET.',
-        url: 'https://www.myscheme.gov.in/schemes/bsccs'
+        highlights: 'Leading CBSE senior secondary schools in Begusarai preparing Class 10–12 students for Olympiads, JEE Main, NEET UG, and CUET.',
+        url: 'https://davbegusarai.com/'
       }
     ];
 
@@ -863,11 +870,11 @@
       {
         id: 'sch-matric',
         title: 'Mukhyamantri Balak / Balika (10th Passed) Protsahan Yojana',
-        benefit: '₹10,000 (1st Division) / ₹8,000 (2nd Division, SC/ST) One-Time Grant',
+        benefit: '₹10,000 One-Time Grant (Class 10 Matric Pass)',
         levels: ['10th_pass', 'post_matric'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
         gender: 'ALL',
-        description: 'Provides ₹10,000 via Direct Benefit Transfer (DBT) to students who pass the BSEB Class 10 (Matriculation) board examination in 1st Division, and ₹8,000 to SC/ST students who pass in 2nd Division, to support their Class 11–12 studies.',
+        description: 'Provides ₹10,000 via Direct Benefit Transfer (DBT) to students who pass the BSEB Class 10 (Matriculation) board examination in 1st Division (all categories) or 2nd Division (for SC/ST students) to support their Class 11–12 studies.',
         process: 'Apply online on the Medhasoft Bihar portal using your BSEB Class 10 Roll Number and registration details.',
         url: 'https://www.shiksha.com/college/articles/bihar-scholarship-2026-27-list-eligibility-apply-online-last-date-and-status-check-blogId-242985'
       },
@@ -878,7 +885,7 @@
         levels: ['12th_pass', 'post_matric'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
         gender: 'ALL',
-        description: 'Provides collateral-free, interest-free (0%, since September 2025) education loans up to ₹4 Lakh for 12th-pass students of Bihar pursuing B.Tech, General Graduation, Polytechnic, Nursing, or MBA.',
+        description: 'Provides collateral-free education loans up to ₹4 Lakh at 4% simple interest (1% for female, transgender, and PwD students) for 12th-pass students of Bihar pursuing B.Tech, General Graduation, Polytechnic, Nursing, or MBA.',
         process: 'Apply online on the MNSSBY portal and verify documents at DRCC Begusarai.',
         url: 'https://www.7nishchay-yuvaupmission.bihar.gov.in/',
         secondaryUrl: 'https://www.myscheme.gov.in/schemes/bsccs'
@@ -922,7 +929,6 @@
         benefit: '₹50,000 (BPSC Prelims) / ₹1,00,000 (UPSC Prelims)',
         levels: ['grad_pass', 'civil_services'],
         categories: ['General', 'EBC_OBC', 'SC_ST'],
-        generalFemaleOnly: true,
         gender: 'ALL',
         description: 'One-time cash incentive for permanent residents of Bihar (covering SC, ST, EBC, and all categories of women candidates) who qualify the Preliminary examination of BPSC Combined Competitive Exam or UPSC Civil Services.',
         process: 'Online application with Prelims admit card and result notification.',
@@ -983,6 +989,20 @@
         options: ['August 15, 1947', 'January 26, 1950', 'October 2, 1972', 'November 15, 2000'],
         correctIndex: 2,
         explanation: 'Begusarai was established as a separate district on October 2, 1972, after being separated from Munger district.'
+      },
+      {
+        id: 'q7',
+        question: 'Which prose chapter by Rashtrakavi Ramdhari Singh \'Dinkar\' is prescribed in the BSEB Class 12 Hindi textbook "Digant Bhag-2"?',
+        options: ['Batcheet', 'Ardhanarishwar (अर्धनारीश्वर)', 'Shiksha', 'Pragati Aur Samaj'],
+        correctIndex: 1,
+        explanation: 'Dinkar\'s philosophical essay "Ardhanarishwar" is a core prose chapter in BSEB Class 12 Hindi (Digant Bhag-2), while his poem "Janatantra Ka Janm" is in Class 10 Hindi (Godhuli Bhag-2).'
+      },
+      {
+        id: 'q8',
+        question: 'Which eminent historian of Ancient India and Founding Chairman of ICHR—author of the classic NCERT textbook "Ancient India"—was born in Barauni, Begusarai?',
+        options: ['Prof. Ram Sharan Sharma (R.S. Sharma)', 'Dr. K.P. Jayaswal', 'Prof. Bipan Chandra', 'Dr. Rajendra Prasad'],
+        correctIndex: 0,
+        explanation: 'Prof. Ram Sharan Sharma (1919–2011), born in Barauni, Begusarai, authored the classic NCERT Ancient India textbook ("India\'s Ancient Past") and served as Founding Chairman of ICHR.'
       }
     ];
 
@@ -1019,7 +1039,7 @@
         {
           badge: 'Post-12th Science Funding',
           title: '₹4 Lakh BSCC Loan & ₹25,000 Inter Grant',
-          desc: 'Unmarried girls passing BSEB 12th receive ₹25,000 under Kanya Utthan Yojana. All 12th-pass students can avail an interest-free loan of up to ₹4 Lakh via Bihar Student Credit Card at DRCC Begusarai for B.Tech/MBBS/B.Sc.'
+          desc: 'Unmarried girls passing BSEB 12th receive ₹25,000 under Kanya Utthan Yojana. All 12th-pass students can avail up to ₹4 Lakh at 1%–4% interest via Bihar Student Credit Card at DRCC Begusarai for B.Tech/MBBS/B.Sc.'
         }
       ],
       class12_arts_com: [
@@ -1378,8 +1398,7 @@
         const matchLevel = state.eligLevel === 'ALL' || s.levels.includes(state.eligLevel);
         const matchCat = state.eligCategory === 'ALL' || s.categories.includes(state.eligCategory);
         const matchGender = state.eligGender === 'ALL' || s.gender === 'ALL' || s.gender === state.eligGender;
-        const matchGeneralWomen = !(s.generalFemaleOnly && state.eligCategory === 'General' && state.eligGender !== 'Female');
-        return matchLevel && matchCat && matchGender && matchGeneralWomen;
+        return matchLevel && matchCat && matchGender;
       });
 
       document.getElementById('schemeCountHeading').textContent =
@@ -1668,6 +1687,12 @@
       };
       document.getElementById('closeSavedModalBtn').addEventListener('click', closeModal);
       document.getElementById('closeSavedModalFooterBtn').addEventListener('click', closeModal);
+      savedModal.addEventListener('click', (e) => {
+        if (e.target === savedModal) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !savedModal.classList.contains('hidden')) closeModal();
+      });
       document.getElementById('clearSavedListBtn').addEventListener('click', () => {
         state.savedItems = [];
         persistState();
@@ -1688,7 +1713,6 @@
       }
 
       // Initial renders
-      renderLanguage();
       renderGradeStage();
       updateSavedBadge();
       renderZoneExplorer();
