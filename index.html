@@ -748,7 +748,7 @@ window.SS_DATA = {
   }
   function renderAll() { renderStatic(); renderHome(); renderExams(); renderColleges(); renderSchemes(); renderHeritage(); renderQuiz(); renderSaved(); show(S.tab, false); }
   function applyTheme() { document.documentElement.setAttribute('data-theme', S.theme); $('#theme').textContent = S.theme === 'dark' ? '☀️' : '🌙'; }
-  function wa(text) { var u = 'https://wa.me/?text=' + encodeURIComponent(text); var w = window.open(u, '_blank', 'noopener'); if (!w) location.href = u; }
+  function wa(text) { var u = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text); var w = window.open(u, '_blank', 'noopener'); if (!w) location.href = u; }
 
   // ---------- events (one delegated listener) ----------
   document.addEventListener('click', function (e) {
